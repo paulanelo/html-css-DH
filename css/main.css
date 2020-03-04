@@ -1,50 +1,142 @@
-.body {
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+    --purple: #5b4e7b;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 .header {
     border-bottom: 1px solid black;
-    height: 6vh;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+
+
 .header * {
-    display: inline-block;
+    display: flex;
+}
+
+header a {
+    align-items: center;
+    text-decoration: none;
+    color: #000;
 }
 
 .header a .header-title {
     margin-left: 5px;
+    font-size: 1.5rem;
 }
 
 .header .header-logo {
     width: 70px;
 }
 
-nav {
+/* nav {
     float: right;
-}
+} */
 
-nav ul li {
+.header nav ul li {
     width: 120px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    /* font-weight: 700; */
 }
 
+.header nav ul a:hover {
+    transition: 1000ms;
+    color: var(--purple);
+}
 
 main .banner {
-    height: 94vh;
+    height: 85vh;
     background: no-repeat url("../img/banner.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
-    vertical-align: middle;
+    color: #fff;
 }
 
 main .banner p {
     text-transform: capitalize;
+    padding-top: 300px;
+}
+
+main section.banner * {
+    margin-bottom: 15px;
+}
+
+main .banner h2 {
+    font-size: 2rem;
 }
 
 main .banner h2, main .banner button {
     text-transform: uppercase;
+}
+
+main #grid {
+    height: 85vh;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main #grid .grid--card {
+    height: 250px;
+    width: 375px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+main #grid .grid--card:nth-child(1) {
+    background: url('../img/product-1.png');
+    background-size: cover;
+}
+
+main #grid .grid--card:nth-child(2) {
+    background: url('../img/product-2.jpg');
+    background-size: cover;
+}
+
+main #grid .grid--card:nth-child(3) {
+    background: url('../img/product-3.jpg');
+    background-size: cover;
+}
+
+main #grid .grid--card:nth-child(4) {
+    background: url('../img/product-4.jpg');
+    background-size: cover;
+}
+
+main #grid .grid--card:nth-child(5) {
+    background: url('../img/product-5.jpg');
+    background-size: cover;
+}
+
+main #grid .grid--card:nth-child(6) {
+    background: url('../img/product-6.jpg');
+    background-size: cover;
+}
+
+footer {
+    height: 10vh;
+    width: 100vw;
+    background: var(--purple);
+    color: #fff;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 button {
@@ -53,4 +145,18 @@ button {
     border-radius: 30px;
     border: none;
     font-weight: 700;
+    margin-top: 10px;
+}
+
+.grid--btn {
+    /* display: none; */
+    width: 25%;
+    border-radius: 1px;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    transition: 1000ms;
+    background-color: var(--purple);
+    color: #fff;
 }
